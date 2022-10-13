@@ -1,0 +1,19 @@
+form {
+    margin:10px;
+}
+
+label,textarea,input,button {
+    display:block;
+    width: 100%;
+}
+
+button {
+    background-color: #6667AB;
+    color: #FFFFFF;
+    border: 1px solid #6667AB;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight:bold;
+    text-transform: uppercase;
+}

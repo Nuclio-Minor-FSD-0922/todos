@@ -1,0 +1,11 @@
+div {
+    border: 1px solid #6667AB;
+    padding:0 10px;
+    margin-bottom:10px;
+}
+
+p.fecha {
+    font-size: 14px;
+    color: darkgrey;
+    margin-top:-15px;
+}
