@@ -1,24 +1,25 @@
+import React, {useEffect, useState} from "react"
 import Listitem from "./Listitem"
 
 function List() {
-
-    var todos = [
-        {
-            tarea: "Llevar la gata al veterinario",
-            dueDate: "15NOV",
-        },
-        {
-            tarea: "Preparar la clase de Nuclio",
-            dueDate: "20NOV"
-        }
-    ]
     
+    const [todos, setItems] = useState([])
+
+    useEffect(
+        function() {
+            fetch('http://localhost:8000/properties')
+                .then(response => response.json())
+                .then(data => setItems(data))
+        }    
+    )
+    
+  
     return(
     <div>
         <h2>Tareas</h2>
         
         {todos.map(function(todo){
-            return (<Listitem tarea={todo.tarea} dueDate={todo.dueDate} />)
+            return (<Listitem tarea={todo.tarea} dueDate={todo.fechaLimite} />)
         })}
     </div>
     )
